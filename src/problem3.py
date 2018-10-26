@@ -223,11 +223,14 @@ def problem3(seq_of_seq):
       :rtype: (list of int) | int
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
-
+    for k in range(len(seq_of_seq)):
+        for j in range(len(seq_of_seq[k])):
+            if is_prime(seq_of_seq[k][j]) is True:
+                return seq_of_seq[k]
+    return -1
 ###############################################################################
 # Our tests use the following to print error messages in red.
 # Do NOT change it.  You do NOT have to do anything with it.

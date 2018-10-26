@@ -86,12 +86,12 @@ def problem1(numbers):
       :type numbers:  [int]
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
     total = 0
     for k in range(int(len(numbers)-2*(len(numbers)/3)), int(len(numbers)-(len(numbers)/3))):
-        total=total+numbers[k]
+        total = total+numbers[k]
     return total
 ###############################################################################
 # Our tests use the following to print error messages in red.
