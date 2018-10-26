@@ -96,11 +96,8 @@ def problem2(sequence):
     # -------------------------------------------------------------------------
     x = sequence[0]
     for k in range(len(sequence)):
-        if sequence[k] > x:
-            x = sequence[k]
-            index = k
-        if -1*sequence[k] > x:
-            x = -sequence[k]
+        if m.fabs(sequence[k]) > x:
+            x = m.fabs(sequence[k])
             index = k
     return index
 
