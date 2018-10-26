@@ -94,10 +94,13 @@ def problem2(sequence):
     # Done: 2. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-    x = sequence[0][0]
+    x = sequence[0]
     for k in range(len(sequence)):
-        if m.fabs(sequence[k]) > x:
+        if sequence[k] > x:
             x = sequence[k]
+            index = k
+        if -1*sequence[k] > x:
+            x = -sequence[k]
             index = k
     return index
 
