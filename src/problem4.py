@@ -2,8 +2,8 @@
 Exam 3, problem 4.
 
 Authors: David Mutchler, Dave Fisher, Matt Boutell, their colleagues,
-         and PUT_YOUR_NAME_HERE.  October, 2018.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Nicolas Bohner.  October, 2018.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -83,6 +83,28 @@ And this one for n=14:
     # IMPORTANT: In your final solution for this problem,
     #   you must NOT use string multiplication.
     ####################################################################
+    for k in range(1, n+1):
+        sub = ""
+        x=1
+        for j in range(n-k, -1, -1):
+            sub = sub+" "
+        for j in range(1, k+1):
+            sub = sub+str(x)
+            x = x+1
+            if x > 9:
+                x = 0
+        sub=sub+" "
+        for j in range(k+1):
+            sub = sub+"*"
+        sub=sub+" "
+        x=0
+        for h in range(n-k, -1, -1):
+            if h>9:
+                x=1
+            sub = sub+str(1+h)
+
+
+        print(sub)
 
 
 # ----------------------------------------------------------------------
