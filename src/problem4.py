@@ -77,7 +77,7 @@ And this one for n=14:
     :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     ####################################################################
     # IMPORTANT: In your final solution for this problem,
@@ -85,25 +85,27 @@ And this one for n=14:
     ####################################################################
     for k in range(1, n+1):
         sub = ""
-        x=1
-        for j in range(n-k, -1, -1):
+        x = 1
+        for j in range(n-k-1, -1, -1):
             sub = sub+" "
+# Puts spaces in sub
         for j in range(1, k+1):
             sub = sub+str(x)
             x = x+1
             if x > 9:
                 x = 0
-        sub=sub+" "
+        sub = sub+" "
+# Checks for double digit and adds first number column to sub
         for j in range(k+1):
             sub = sub+"*"
-        sub=sub+" "
-        x=0
-        for h in range(n-k, -1, -1):
-            if h>9:
-                x=1
-            sub = sub+str(1+h)
-
-
+        sub = sub+" "
+# Adds * column to sub
+        for h in range(n-k+1, 0, -1):
+            x = h
+            if x > 9:
+                x = h-10
+            sub = sub+str(x)
+# Adds second column of numbers to sub
         print(sub)
 
 
